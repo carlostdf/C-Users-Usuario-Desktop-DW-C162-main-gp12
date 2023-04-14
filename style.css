@@ -1,0 +1,408 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/* --------------------------- logo/buscador/login ---------------------------- */
+body{
+    background: #ec853111;
+    height: 100%;
+}
+.contenedor_inicio_1{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 3rem 0 0;
+    margin: 0 0 3rem 0;
+    gap: 5rem;
+}
+.contenedor_inicio_1 .container-logo{
+    margin: 1rem 0 0 0;
+}
+.contenedor_inicio_1 .buscador{
+    width: 20rem;
+    height: 3rem;
+}
+.contenedor_inicio_1 .buscador .form-buscador {
+    width:100%;
+    height: 100%; 
+}
+.contenedor_inicio_1 .buscador .form-buscador .input_buscador{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1rem;
+}
+/* .contenedor_inicio_1 .contenedor-login{
+    background: #000;
+    height: 2.2rem;
+    width: 6.4rem;
+} */
+/* .contenedor_inicio_1 .contenedor-login .input_login{
+    width: 100%;
+    height: 100%;
+    background: rgb(253,97,53);
+    border: none;
+    border-radius: .5rem;
+    color: white;
+    font-weight: bolder;
+    font-size: .75rem;
+} */
+/* --------------------------- modal ---------------------------- */
+.contenedor-login{
+    background: rgb(253,97,53);
+    width: 8%;
+    height: 2.45rem;
+    border-radius: .5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.modal{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-modal:checked ~ .modal{
+    opacity: 1;
+    visibility: visible;
+}
+.contenedor{
+    width: 26rem;
+    height: 18.77rem;
+    background: rgb(201, 100, 5);
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+    transition: all 500ms ease;
+    position: relative;
+    border-radius: .5rem;
+    transform: translateY(-30%);
+}
+#btn-modal:checked ~ .modal .contenedor{
+    transform: translateY(0%);
+}
+.modal-container{
+    display: flex;
+    flex-direction: column;
+}
+.logo_myc img{
+    position: absolute;
+    width: 3rem;
+    bottom: 15rem;
+    left: 8rem;
+}
+.modal-header{
+    display: flex;
+    width: 100%;
+    background: rgb(253,97,53);
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    top: .1rem;
+    right:8rem;
+}
+.container-login-title-modal{
+    width: 90%;
+}
+.containe-back-bottom-modal{
+    width: 10%;
+}
+.containe-back-bottom-modal label{
+    font-size: .8rem;
+    color: #fff;
+    font-weight: bold;
+    transition: .3s;
+    cursor: pointer;
+}
+.containe-back-bottom-modal label:hover{
+    color: rgb(51, 24, 24);
+}
+
+.modal-header .login{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.modal-content{
+    position: relative;
+    background: rgb(253,97,53);
+    height: 20rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor label{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+#btn-modal{
+    display: none;
+}
+.lbl-modal{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+}
+
+
+
+.lbl-modal p{
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.label-modal-checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0 0 0;
+}
+
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.form-label{
+    left: 1rem;
+}
+.btn_ingresar{
+    position: relative;
+    width: 20rem;
+    left: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    color: #fff;
+}
+.registrarse{
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    left: 7rem;
+}
+.btn_submit{
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+}
+.ntnes-cnta{
+    position: relative;
+    left: .6rem;
+}
+/* --------------------------- nav-bar ---------------------------- */
+.nav_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 4rem;
+    padding: 0 2rem;
+}
+.nav{
+    background-color: rgb(247, 82, 36);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: (0px 5px 5px rgba(0, 0, 0, 0.25));
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    gap: 5vw;
+
+}
+
+.nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: whitesmoke;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0,));
+    transition: .3s;
+}
+.nav a:hover{
+    color: rgb(61, 43, 32);
+}
+
+footer{
+    box-sizing: none;
+    background-color: rgb(253,97,53);
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0,));
+    display: flex;
+    padding: 10vw 5vh;
+    justify-content:space-around;
+    border-radius: 15px;
+    
+
+}
+.btn {
+    background-color: rgb(253,97,53);
+    width: 10vw;
+    height: 6vh;
+    border-radius: 10px;
+}
+img{
+    width: 10vw;
+}
+/* --------------------------- carrusel ---------------------------- */
+.container-padre-carrousel{
+    padding: 2rem 0;
+    width: 100%;
+    display: flex;
+    padding: 0 2rem;
+    margin: 1rem 0;
+}
+.container-carrusel-style{
+    width: 100%;
+    height: 65vh;
+    display: flex;
+}
+.carousel-style{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;  
+}
+.slide-carrousel-items{
+    width: 100%;
+    height: 100%;
+}
+.img-carrusel{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --------------------------- carrusel ---------------------------- */
+
+.form {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 2rem 0; 
+    flex-wrap: wrap;
+}
+.form_titulo{
+    width: 100%;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(21, 21, 21);
+    text-shadow: 2px 0px 2px rgba(252, 135, 68, 0.222);
+}
+.form_group{
+/*     background: rgb(228, 228, 228); */
+    width: 40%;
+    height: 100%;
+    padding: 2rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 5px 2px 4px rgba(255, 255, 255, 0.497);
+}
+.form_group_1{
+    width: 50%;
+    position: relative;
+    color: #5757577e;
+    padding: 0 .5rem;
+    font-weight: bold;
+}
+.form_input{
+    width: 100%;
+    font-size: 1rem;
+    padding: .6rem .3rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #2f2e2e7e;
+    background: rgba(0, 0, 0, 0);
+}
+.form_label{
+    position: absolute;
+    color: #1b1a1a7e;
+    top: -.5rem;
+    left: .4rem;
+    transform: translateY(10px);
+    transition: .4s;
+}
+.form_input:focus + .form_label,
+.form_input:not(:placeholder-shown) + .form_label {
+    transform: translateY(-12px) scale(.9);
+    transform-origin: top left;
+    color: #3866f2;
+}
+
+
+.form_group_2{
+    width: 100%;
+    margin-top: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+.form_textarea{
+    border: 1px solid #2f2e2e7e;
+    height: 30% !important;
+    resize: none;
+    border-radius: .2rem;
+    padding: 0 .5rem;
+}
+.form_label_textarea{
+    top: -.6rem;
+    left: 1rem;
+}
+
+.boton_enviar{
+    width: 100%;
+    display: flex;
+    padding-right: .45rem;
+    justify-content: end;
+    gap: .4rem;
+}
+.boton_enviar input{
+    background: rgb(62, 68, 171);
+    border: 1px solid #4545454e;
+    box-shadow: 5px 2px 4px rgba(199, 198, 198, 0.75);
+    padding: .1rem 1rem;
+    border-radius: .2rem;
+    color: #fff;
+    transition: .2s;
+}
+.boton_enviar input:hover{
+    background: rgb(70, 118, 162);
+    transform: scale(.94);
+}
+
+
